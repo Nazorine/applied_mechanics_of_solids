@@ -1,0 +1,100 @@
+\documentclass[12pt,a3paper]{book}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}  
+\usepackage[UTF8]{ctex}                                                      
+%%
+\usepackage{indentfirst,setspace,microtype}  
+\linespread{1.5}          
+%%  
+\usepackage{amssymb,amsfonts,amsmath,bm,showlabels}                          
+\allowdisplaybreaks                                  
+%%
+\usepackage{graphicx,subfigure,caption,enumitem,epstopdf,epsfig,wrapfig,tikz}   
+\graphicspath{{figure/}}
+%%
+\usepackage{hyperref,cite,color,xcolor,framed}  
+\hypersetup{colorlinks=true,citecolor={red},linkcolor={blue}} 
+%%
+\usepackage{changes}
+\definechangesauthor{red}
+\colorlet{Changes@Color}{red}
+%% 
+\usepackage{titlesec}
+\titleformat{\paragraph}[hang]{}{\theparagraph \quad}{0pt}{}  
+\titleformat{\subparagraph}[hang]{}{\thesubparagraph \quad}{0pt}{}         
+\setcounter{tocdepth}{5}  
+\setcounter{secnumdepth}{5} 
+%%
+%\usepackage{draftwatermark}
+%\SetWatermarkText{内部使用} % the Text
+%\SetWatermarkLightness{0.9} % the lightness from 0 to 1, default 0.8
+%\SetWatermarkScale{0.5} % the scale, default 1.2
+%% others
+\usepackage{pifont,listings,framed}    
+%% newcommand
+% \newcommand{\mathcolorbox}[2]{\colorbox{#1}{$ #2$}}
+\newcommand{\mathcolorbox}[2]{\colorbox{#1}{$\displaystyle #2$}}
+\newcommand\hl[1]{\bgroup\markoverwith{\textcolor{#1}{\rule[-.5ex]{2pt}{2.5ex}}}\ULon}
+
+\usepackage{tikz}
+\usetikzlibrary{tikzmark}
+
+% title, author, date
+\title{\LARGE\bfseries\songti 学习笔记}
+
+% \author{ \kaishu 平安喜乐
+% 		\thanks{常怀感恩之心！} \\[0.5ex] % 在第一页左下角加感谢
+% 		}
+
+\date{\small\itshape Last update: \today}
+
+
+\begin{document}
+% \songti
+% \youyuan 
+\kaishu
+% \fangsong
+
+\maketitle 
+\clearpage
+
+\tableofcontents  
+\clearpage
+
+
+
+
+\clearpage
+\chapter*{8 有限元分析：理论和实现}
+
+\section*{8.1 静力线弹性有限元}
+
+
+\subsection*{8.1.5 有限元的简单一维实现}
+
+
+在描述一个完全通用的三维有限元实现之前，我们将用一个简单的一维例子来说明所有的关键思想。考虑一根长的线弹性杆，如图8.3所示。假设:
+
+
+
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{reference}
+
+
+
+
+\end{document}
+
+
+
+
+
