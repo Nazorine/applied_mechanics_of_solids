@@ -136,6 +136,23 @@
 \end{equation*}
 其中 $x_1^a$ 表示单元上每个节点的坐标，$N_e$ 是单元节点数（2或3）。使用相同形函数插值位移和位置的单元称为等参单元。
 
+接下来，我们需要设计一种方法来对刚度矩阵和力矢量的表达式进行积分。显然，我们可以将积分进行分割，依次对每个元素积分:
+
+\begin{equation*}
+    \begin{aligned}
+        K_{a b}=\sum_{l=1}^{N_{\text {lmn }}} h^{2} \int_{x 0}^{x 1} \frac{2 \mu(1-v)}{1-2 v} \frac{\partial N^{a}\left(x_{1}\right)}{\partial x_{1}} \frac{\partial N^{b}\left(x_{1}\right)}{\partial x_{1}} d x_{1}
+    \end{aligned}
+\end{equation*}
+
+
+% \begin{equation*}
+%     \begin{aligned}
+% 
+%     \end{aligned}
+% \end{equation*}
+
+
+
 
 % 
 
