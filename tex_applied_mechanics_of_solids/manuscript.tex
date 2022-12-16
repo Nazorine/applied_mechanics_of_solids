@@ -145,12 +145,33 @@
 \end{equation*}
 
 
-% \begin{equation*}
-%     \begin{aligned}
-% 
-%     \end{aligned}
-% \end{equation*}
+\begin{equation*}
+    \begin{aligned}
+        F^{a}=\sum_{l=1}^{N_{l m n}} h^{2} \int_{x 0}^{x 1} b N^{a}\left(x_{1}\right) d x_{1}+h^{2} t_{i}^{*} N^{a}(0)+h^{2} t_{i}^{*} N^{a}(L)
+    \end{aligned}
+\end{equation*}
 
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.45\textwidth]{Table_8_1.png}
+	%%\caption{}
+\end{figure}
+其中 $N_{lmn}$ 是单元的总数，$x_0$ 和 $x_1$ 表示第 $l$ 个单元端点的坐标。我们现在注意到我们的插值方案的一个吸引人的特点。因为第 $l$ 个单元所在区域的位移完全由该单元上的节点值决定，所以第 $l$ 个单元上的积分只取决于与该单元的节点相关的形函数。因此，对于每个单元，我们可以定义单元刚度矩阵和单元力矩阵，
+\begin{equation*}
+    \begin{aligned}
+        k_{a b}=h^{2} \int_{x 0}^{x 1} \frac{2 \mu(1-v)}{1-2 v} \frac{\partial N^{a}\left(x_{1}\right)}{\partial x_{1}} \frac{\partial N^{b}\left(x_{1}\right)}{\partial x_{1}} d x_{1}
+        \qquad
+        f^{a}=h^{2} \int_{x 0}^{x 1} b N^{a}\left(x_{1}\right) d x_{1},
+    \end{aligned}
+\end{equation*}
+其取决于几何，插值函数和单元的材料属性。第一个和最后一个单元对单元力向量有来自边界项 $h^2 t^* N^a(0), h^2 t^* N^a(L)$ 额外的贡献。全局刚度矩阵由所有单元刚度矩阵之和计算:
+\begin{equation*}
+    \begin{aligned}
+        K_{a b}=\sum_{l=1}^{N_{l m n}} k_{a b} 
+        \qquad
+        F^{a}=\sum_{l=1}^{N_{\operatorname{lmn}}} f^{a}+h^{2} t^{*} N^{a}(0)+h^{2} t^{*} N^{a}(L)
+    \end{aligned}
+\end{equation*}
 
 
 
